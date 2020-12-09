@@ -14,6 +14,7 @@ import { CategoryListComponent } from './components/category-list/category-list.
 import { PriorityPipe } from './pipes/priority.pipe';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { CategoryFilterPipe } from './pipes/category-filter.pipe';
+import { TestitestComponent } from './components/testitest/testitest.component';
 
 /*
 todo: highlight clicked category + make category unselectable + if category delete delete from clickedCat list + reset btn to reset all filters
@@ -28,7 +29,8 @@ todo: highlight clicked category + make category unselectable + if category dele
     CategoryListComponent,
     PriorityPipe,
     SearchFilterPipe,
-    CategoryFilterPipe
+    CategoryFilterPipe,
+    TestitestComponent
   ],
   imports: [
     BrowserModule,
