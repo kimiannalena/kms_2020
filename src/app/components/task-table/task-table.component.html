@@ -16,7 +16,7 @@
   </thead>
   <tbody>
   <tr class="row"
-      *ngFor="let task of this._taskList | searchFilter: searchText; let i = index;"
+      *ngFor="let task of this._taskList | searchFilter: searchText : clickedCategories : searchText != '' : this.clickedCategories.length != 0; let i = index;"
   >
     <td class="col-1">{{i}}</td>
     <td class="col-1">{{task.priority | priority}}</td>

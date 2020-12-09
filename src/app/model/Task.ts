@@ -1,5 +1,5 @@
 import { Priority } from './Priority';
-import {Category} from "./Category";
+import {Category} from './Category';
 
 export class Task {
 
@@ -17,6 +17,6 @@ export class Task {
   done: boolean;
   date: Date;
   priority: Priority;
-  category: Category
+  category: Category;
 
 }

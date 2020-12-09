@@ -13,7 +13,11 @@ import { CategoryInputComponent } from './components/category-input/category-inp
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { PriorityPipe } from './pipes/priority.pipe';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 
+/*
+todo: highlight clicked category + make category unselectable + if category delete delete from clickedCat list + reset btn to reset all filters
+ */
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,8 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     CategoryInputComponent,
     CategoryListComponent,
     PriorityPipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,

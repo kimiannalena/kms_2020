@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { TaskService } from '../../service/task.service';
 import { Task } from '../../model/Task';
+import { CategoryService } from "../../service/category.service";
+import { Category } from "../../model/Category";
 
 @Component({
   selector: 'app-task-table',
@@ -10,10 +12,13 @@ import { Task } from '../../model/Task';
 export class TaskTableComponent implements OnInit {
 
   public searchText: string;
+  public clickedCategories: Category[]
 
-  constructor(public taskService: TaskService) {
+  constructor(public taskService: TaskService,
+              public categoryService: CategoryService) {
     this.searchText = '';
     console.log(taskService.taskList);
+    this.clickedCategories = this.categoryService.categoriesClicked;
   }
 
   openEditModal(editEntry: Task): void {

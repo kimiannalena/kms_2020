@@ -12,6 +12,7 @@ export class CategoryListComponent implements OnInit {
   constructor(public categoryService: CategoryService) {
     console.log(categoryService.CATEGORYLIST);
   }
+
   get categoryList(): Category[] {
     return this.categoryService.CATEGORYLIST;
   }
@@ -22,4 +23,7 @@ export class CategoryListComponent implements OnInit {
   delete(id: number): void{
     this.categoryService.deleteCategory(id);
   }
+  categoryFilter(id: number): void {
+    this.categoryService.addCategoriesClicked(id)
+    }
 }

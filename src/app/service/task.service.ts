@@ -3,8 +3,8 @@ import {Task} from '../model/Task';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {AddTaskModalComponent} from '../components/task-edit-modal/add-task-modal.component';
 import {Priority} from '../model/Priority';
-import {Category} from "../model/Category";
-import { CategoryService } from "./category.service";
+import {Category} from '../model/Category';
+import {CategoryService } from './category.service';
 
 
 @Injectable({
@@ -15,6 +15,7 @@ export class TaskService {
   constructor(private modalService: NgbModal,
               public categoryService: CategoryService) {
   }
+
 
   // tslint:disable-next-line:variable-name
   _taskList: Task[] = [
@@ -39,7 +40,7 @@ export class TaskService {
           task.title = title;
         }
         if (category.title !== '') {
-          task.category = category
+          task.category = category;
         }
         if (priority in Priority) {
           task.priority = priority;
@@ -65,9 +66,9 @@ export class TaskService {
   }
 
   doneTask(id: number): void {
-    for (let i = 0; i < this._taskList.length; i++) {
-      if (this._taskList[i].id == id) {
-        this._taskList[i].done = !this._taskList[i].done
+    for (const item of this._taskList) {
+      if (item.id === id) {
+        item.done = !item.done;
       }
     }
   }
@@ -78,8 +79,8 @@ export class TaskService {
 
   deleteTask(id: number): void {
     for (let i = 0; i < this._taskList.length; i++) {
-      if (this._taskList[i].id == id) {
-        this._taskList.splice(i, 1)
+      if (this._taskList[i].id === id) {
+        this._taskList.splice(i, 1);
       }
     }
   }

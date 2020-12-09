@@ -14,7 +14,7 @@ export class TaskInputComponent implements OnInit {
   @Output() addTodo: EventEmitter<any> = new EventEmitter();
   public title: string;
   public priority: Priority;
-  public categoryTitle: string
+  public categoryTitle: string;
 
 
   public newEntry = new Task('', new Category(''), Priority.low);
@@ -23,7 +23,7 @@ export class TaskInputComponent implements OnInit {
     // empty field
     this.title = '';
     this.priority = Priority.low;
-    this.categoryTitle = ''
+    this.categoryTitle = '';
   }
 
   ngOnInit(): void {
@@ -34,7 +34,7 @@ export class TaskInputComponent implements OnInit {
     // call service
     this.newEntry.title = this.title;
     this.newEntry.priority = this.priority;
-    this.newEntry.category = new Category(this.categoryTitle)
+    this.newEntry.category = new Category(this.categoryTitle);
     this.taskService.addTask(this.newEntry);
     // @ts-ignore
     document.getElementById('taskInput').value = '';

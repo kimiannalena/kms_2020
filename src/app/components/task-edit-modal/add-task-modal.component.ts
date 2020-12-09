@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { CategoryService } from "../../service/category.service";
+import { CategoryService } from '../../service/category.service';
 
 @Component({
   selector: 'app-add-task-modal',
@@ -10,13 +10,13 @@ import { CategoryService } from "../../service/category.service";
 export class AddTaskModalComponent implements OnInit {
   public title: string;
   public priority: string;
-  public categoryTitle: string
+  public categoryTitle: string;
 
   constructor(public activeModal: NgbActiveModal,
               public categoryService: CategoryService) {
     this.title = '';
     this.priority = '';
-    this.categoryTitle = ''
+    this.categoryTitle = '';
   }
 
   save(): void {
