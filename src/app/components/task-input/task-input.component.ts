@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TaskService } from '../../service/task.service';
-import { CategoryService } from "../../service/category.service";
+import { CategoryService } from '../../service/category.service';
 import { Task } from '../../model/Task';
 import { Priority } from '../../model/Priority';
-import { Category } from "../../model/Category";
+import { Category } from '../../model/Category';
 
 @Component({
   selector: 'app-task-input',
