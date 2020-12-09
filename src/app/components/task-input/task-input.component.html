@@ -1,30 +1,30 @@
 <div class="container" id="task-container">
-    <div id="form-wrapper">
-      <form id="form" (ngSubmit)="onSubmit()" #taskForm="ngForm">
-            <div class="input-group">
-              <label for="taskInput"></label>
-              <input id="taskInput" value='' type="text" class="form-control col-4" required name="title" placeholder="Todo" [(ngModel)]="title">
+  <div id="form-wrapper">
+    <form id="form" (ngSubmit)="onSubmit()" #taskForm="ngForm">
+      <div class="input-group">
+        <label for="taskInput"></label>
+        <input id="taskInput" value='' type="text" class="form-control col-4" required name="title" placeholder="Todo"
+               [(ngModel)]="title">
 
-              <label for="taskCategoryInput"></label>
-<!--              <input id="taskCategoryInput" value="" type="text" class="form-control col-4" required name="category" placeholder="Category" [(ngModel)]="categoryTitle">-->
-              <select name="Category" id="taskCategoryInput" [(ngModel)]="categoryTitle" class="form-control col-4" >
-                <option selected disabled value="">Category</option>
-                <option *ngFor="let cat of this.categoryService.CATEGORYLIST"> {{cat.title}} </option>
-              </select>
+        <label for="taskCategoryInput"></label>
+        <select name="Category" id="taskCategoryInput" [(ngModel)]="categoryTitle" class="form-control col-4">
+          <option selected disabled value="">Category</option>
+          <option *ngFor="let cat of this.categoryService.CATEGORYLIST"> {{cat.title}} </option>
+        </select>
 
-              <label for="prio"></label>
-              <select name="priority" id="prio" [(ngModel)]="priority" class="form-control col-4">
-                <option selected disabled value="">Priority</option>
-                <option value="low">low</option>
-                <option value="medium">medium</option>
-                <option value="high">high</option>
-              </select>
+        <label for="prio"></label>
+        <select name="priority" id="prio" [(ngModel)]="priority" class="form-control col-4">
+          <option selected disabled value="">Priority</option>
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+        </select>
 
-              <div class="input-group-append">
-                <button type="submit" id="submit" class="btn">Submit</button>
-              </div>
-          </div>
-      </form>
-    </div>
+        <div class="input-group-append">
+          <button type="submit" id="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 

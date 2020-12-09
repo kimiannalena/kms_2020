@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Task } from '../model/Task';
-import { Category } from "../model/Category";
+import { Category } from '../model/Category';
 
 @Pipe({
   name: 'searchFilter'
@@ -11,13 +11,13 @@ export class SearchFilterPipe implements PipeTransform {
 
     const searchString: string = searchText.trim().toLocaleLowerCase();
 
-    let resultList: Task[] = list
+    let resultList: Task[] = list;
     if (searchFlag) {
        resultList = resultList.filter(task => task.title.toLocaleLowerCase().indexOf(searchString) !== -1);
     }
     if (catFlag) {
-      resultList = resultList.filter(task => clickedCategories.includes(task.category))
+      resultList = resultList.filter(task => clickedCategories.includes(task.category));
     }
-    return resultList
+    return resultList;
   }
 }
