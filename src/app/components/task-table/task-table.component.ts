@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { TaskService } from '../../service/task.service';
 import { Task } from '../../model/Task';
-import { CategoryService } from "../../service/category.service";
-import { Category } from "../../model/Category";
+import { CategoryService } from '../../service/category.service';
+import { Category } from '../../model/Category';
 
 @Component({
   selector: 'app-task-table',
@@ -12,7 +12,7 @@ import { Category } from "../../model/Category";
 export class TaskTableComponent implements OnInit {
 
   public searchText: string;
-  public clickedCategories: Category[]
+  public clickedCategories: Category[];
 
   constructor(public taskService: TaskService,
               public categoryService: CategoryService) {
