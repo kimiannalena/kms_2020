@@ -1,0 +1,41 @@
+<div class="md-form">
+  <input [(ngModel)]="searchText"  class="form-control" type="text" placeholder="Search" aria-label="Search">
+</div>
+<table class="table">
+  <thead>
+  <tr class="row">
+    <th class="col-1">#</th>
+    <th class="col-1">Priority</th>
+    <th class="col-1">Done?</th>
+    <th class="col-2">Title</th>
+    <th class="col-2">Category</th>
+    <th class="col-2">Date</th>
+    <th class="col-1">Edit</th>
+    <th class="col-1">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="row"
+      *ngFor="let task of this._taskList | searchFilter: searchText; let i = index;"
+  >
+    <td class="col-1">{{i}}</td>
+    <td class="col-1">{{task.priority | priority}}</td>
+    <td class="col-1">
+      <input id="doneCheckbox{{i}}" type="checkbox" (change)="done(task.id)">
+    </td>
+    <td class="col-2">
+      <span [className]="task.done ? 'finish-title' : 'title'">{{task.title}}</span>
+    </td>
+    <td class="col-2">
+      <span>{{task.category.title}}</span>
+    </td>
+    <td class="col-2">{{task.date | date: 'd. MMMM y, H:mm:ss'}}</td>
+    <td class="col-1">
+      <button class="btn btn-outline-secondary" (click)="openEditModal(task)">Edit</button>
+    </td>
+    <td class="col-1">
+      <button class="btn btn-outline-danger" (click)="delete(task.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

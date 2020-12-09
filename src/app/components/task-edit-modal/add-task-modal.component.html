@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit Entry</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="itemInputTitle">Title</label>
+    <input type="text" class="form-control" id="itemInputTitle" [(ngModel)]="title">
+
+    <label for="taskCategoryInput">Category</label>
+<!--    <input type="text" class="form-control" id="itemInputCategory" [(ngModel)]="categoryTitle">-->
+    <select name="Category" id="taskCategoryInput" [(ngModel)]="categoryTitle" class="form-control col-4" >
+      <option selected disabled value="">Category</option>
+      <option *ngFor="let cat of this.categoryService.CATEGORYLIST"> {{cat.title}} </option>
+    </select>
+
+    <label for="itemInputPriority">Priority</label>
+    <select name="priority" id="itemInputPriority" [(ngModel)]="priority" class="form-control col-4">
+      <option selected disabled value="">Priority</option>
+      <option value="0">low</option>
+      <option value="1">medium</option>
+      <option value="2">high</option>
+    </select>
+
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark"
+          (click)="activeModal.dismiss()">Schließen
+  </button>
+  <button type="submit" class="btn btn-success" (click)="save()">Save</button>
+</div>

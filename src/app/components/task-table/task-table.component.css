@@ -1,0 +1,19 @@
+.title {
+  font-weight: 400;
+}
+
+.finish-title {
+  font-weight: 400;
+  font-style: italic;
+  color: #707070;
+  text-decoration: line-through;
+}
+
+.btn-outline-secondary {
+  border-radius: 0;
+  border: none;
+}
+.btn-outline-danger {
+  border-radius: 0;
+  border: none;
+}

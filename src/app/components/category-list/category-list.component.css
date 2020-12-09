@@ -1,0 +1,14 @@
+.card {
+  margin: 15px;
+}
+
+span {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.btn {
+  position: relative;
+  float: right;
+  margin-top: -10px;
+}

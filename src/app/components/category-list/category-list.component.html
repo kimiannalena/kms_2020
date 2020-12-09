@@ -1,0 +1,11 @@
+<div class="container"
+     *ngFor="let category of categoryList; let i = index;"
+>
+  <div class="card">
+          <span>
+            {{category.title}}
+            <button (click)="delete(category.id)" class="btn">x</button>
+          </span>
+  </div>
+  <!--        <app-category-list></app-category-list>-->
+</div>
