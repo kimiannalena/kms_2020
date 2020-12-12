@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskInputComponent } from './task-input.component';
+import { TaskInputComponent } from '../app/components/task-input/task-input.component';
 
 describe('TaskInputComponent', () => {
   let component: TaskInputComponent;

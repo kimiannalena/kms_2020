@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskTableComponent } from './task-table.component';
+import { CategoryInputComponent } from '../app/components/category-input/category-input.component';
 
-describe('TaskTableComponent', () => {
-  let component: TaskTableComponent;
-  let fixture: ComponentFixture<TaskTableComponent>;
+describe('CategoryInputComponent', () => {
+  let component: CategoryInputComponent;
+  let fixture: ComponentFixture<CategoryInputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaskTableComponent ]
+      declarations: [ CategoryInputComponent ]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaskTableComponent);
+    fixture = TestBed.createComponent(CategoryInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

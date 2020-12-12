@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestitestComponent } from './testitest.component';
+import { TestitestComponent } from '../app/components/testitest/testitest.component';
 
 describe('TestitestComponent', () => {
   let component: TestitestComponent;
@@ -20,6 +20,6 @@ describe('TestitestComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(TestitestComponent).toBeTruthy();
   });
 });

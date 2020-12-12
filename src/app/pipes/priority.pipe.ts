@@ -5,7 +5,7 @@ import { Priority } from '../model/Priority';
   name: 'priority'
 })
 export class PriorityPipe implements PipeTransform {
-  transform(value: Priority, ...args: unknown[]): string {
+  transform(value: Priority): string {
     switch (value) {
       case Priority.low:
         return 'low';
