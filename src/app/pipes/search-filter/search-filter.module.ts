@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PriorityPipeMock } from './priority.pipe.mock';
-
 @NgModule({
-  declarations: [PriorityPipeMock],
+  declarations: [],
   imports: [
     CommonModule
   ]
 })
-export class PriorityModule { }
+export class SearchFilterModule { }

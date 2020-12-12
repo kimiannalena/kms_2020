@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { PriorityMock } from './Priority.mock';
+import { PriorityMock } from '../../model/Priority.mock';
 
 @Pipe({
   name: 'priority'
