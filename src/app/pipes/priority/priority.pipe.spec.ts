@@ -1,5 +1,5 @@
-import { PriorityPipeMock } from '../components/mockdata/priority.pipe.mock';
-import { PriorityMock } from '../components/mockdata/Priority.mock';
+import { PriorityPipeMock } from '../../components/mockdata/priority.pipe.mock';
+import { PriorityMock } from '../../components/mockdata/Priority.mock';
 import {TestBed} from '@angular/core/testing';
 import {PriorityPipe} from './priority.pipe';
 

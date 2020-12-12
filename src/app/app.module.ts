@@ -11,7 +11,7 @@ import { TaskTableComponent } from './components/task-table/task-table.component
 import { AddTaskModalComponent } from './components/task-edit-modal/add-task-modal.component';
 import { CategoryInputComponent } from './components/category-input/category-input.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
-import { PriorityPipe } from './pipes/priority.pipe';
+import { PriorityPipe } from './pipes/priority/priority.pipe';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { TestitestComponent } from './components/testitest/testitest.component';
 

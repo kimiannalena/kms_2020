@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Priority } from '../model/Priority';
+import { Priority } from '../../model/Priority';
 
 @Pipe({
   name: 'priority'
