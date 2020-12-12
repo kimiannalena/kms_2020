@@ -35,15 +35,15 @@ export class CategoryService {
     }
   }
 
-  addCategoriesClicked(id: number) {
-    for (let cat of this.CATEGORYLIST) {
-      if (cat.id == id) {
-        if (this.categoriesClicked.indexOf(cat) == -1) {
-          this.categoriesClicked.push(cat)
+  addCategoriesClicked(id: number): void {
+    for (const cat of this.CATEGORYLIST) {
+      if (cat.id === id) {
+        if (this.categoriesClicked.indexOf(cat) === -1) {
+          this.categoriesClicked.push(cat);
         }
       }
     }
-    console.log(this.categoriesClicked)
+    console.log(this.categoriesClicked);
   }
 
 }
