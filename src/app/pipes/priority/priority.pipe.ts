@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Priority } from '../model/Priority';
+import { Priority } from '../../model/Priority';
 
 @Pipe({
   name: 'priority'
 })
 export class PriorityPipe implements PipeTransform {
-  transform(value: Priority, ...args: unknown[]): string {
+  transform(value: Priority): string {
     switch (value) {
       case Priority.low:
         return 'low';

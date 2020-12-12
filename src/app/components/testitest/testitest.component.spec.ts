@@ -20,6 +20,6 @@ describe('TestitestComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(TestitestComponent).toBeTruthy();
   });
 });
