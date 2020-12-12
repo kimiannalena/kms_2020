@@ -1,17 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { PriorityMock } from '../../model/Priority.mock';
+import { Priority } from '../../model/Priority';
 
 @Pipe({
   name: 'priority'
 })
 export class PriorityPipeMock implements PipeTransform {
-  transform(value: PriorityMock): string {
+  transform(value: Priority): string {
     switch (value) {
-      case PriorityMock.low:
+      case Priority.low:
         return 'low';
-      case PriorityMock.medium:
+      case Priority.medium:
         return 'medium';
-      case PriorityMock.high:
+      case Priority.high:
         return 'high';
       default:
         return value;
