@@ -19,7 +19,7 @@ describe('SearchFilter', () => {
 
   it('returns same list if both flags are false', () => {
     expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
-      .toBe(mockList);
+      .toEqual(mockList);
   });
 
   it('perfoms search function correctly on searchFlag true', () => {
