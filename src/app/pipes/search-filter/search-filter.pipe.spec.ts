@@ -24,8 +24,9 @@ describe('SearchFilter', () => {
 
   it('perfoms search function correctly on searchFlag true', () => {
     mockSearchFlag = true;
+    mockSearchText = 'Essen';
     expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
-      .toEqual(mockList[2]);
+      .toEqual([mockList[4]]);
   });
 
   it('perfoms search function correctly', () => {
@@ -36,9 +37,9 @@ describe('SearchFilter', () => {
 
   it('perfoms categorise function correctly on catFlag true', () => {
     mockCatFlag = true;
-    mockClickedCategories = [testCat1];
+    mockClickedCategories = [testCat3];
     expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
-      .toEqual([mockList[1], mockList[3], mockList[5]]);
+      .toEqual([mockList[0]]);
   });
 
   it('perfoms categorise function correctly', () => {
