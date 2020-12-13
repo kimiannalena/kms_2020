@@ -13,5 +13,10 @@ before_install:
 before_script:
   - npm install -g @angular/cli
 
+cache:
+  directories:
+    - ./node_modules
+
 script:
   - ng build
+  - ng test --browsers=ChromeHeadlessCI
