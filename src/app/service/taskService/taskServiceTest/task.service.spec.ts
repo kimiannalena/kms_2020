@@ -6,6 +6,7 @@ import {Category} from '../../../model/Category';
 import {Priority} from '../../../model/Priority';
 
 import {TaskServiceMock} from './task.service.mock';
+import {taskListMock} from '../../../model/mocks/taskMock';
 
 
 
@@ -29,6 +30,9 @@ describe('TaskService', () => {
   //   fixture.detectChanges();
   // }));
   beforeEach( () => { testService = new TaskServiceMock(); });
+  afterEach( () => {
+    testService = new TaskServiceMock();
+  });
 
   it('should be created', waitForAsync( () => {
     expect(testService).toBeTruthy();
@@ -37,32 +41,36 @@ describe('TaskService', () => {
   describe('should get full tasklist', () => {
 
     it('should return empty array if list is empty',  waitForAsync( ()  => {
+      testService._taskList = [];
       expect(testService.taskList).toEqual([]);
     }));
 
     it('should return a list of task objects if there are any',  waitForAsync( ()  => {
-      const task1: Task = new Task('test1', new Category('Privat'), Priority.low, false);
-      const task2: Task = new Task('test2', new Category('Privat'), Priority.low, false);
-      testService.addTask(task1);
-      testService.addTask(task2);
+      testService._taskList = [];
+      const task1: Task = taskListMock[2];
+      const task2: Task = taskListMock[3];
+      testService._taskList = [task1, task2];
       expect(testService.taskList).toEqual([task1, task2]);
     }));
   });
 
   describe('should mark a task as done', () => {
-
+    // the done flag is false on default cause u cant create an already done task ... duh
     it('should mark a undone task to done',  waitForAsync( ()  => {
-      const task: Task = new Task('test1', new Category('Privat'), Priority.low, false);
-      testService.addTask(task);
-      testService.doneTask(task.id);
-      expect(task.done).toEqual(true);
+      const testTask: Task = taskListMock[5];
+      const testTaskDoneFlagAtStart: boolean = testTask.done;
+      testService.addTask(testTask);
+      testService.doneTask(testTask.id);
+      expect(testTask.done).toEqual(!testTaskDoneFlagAtStart);
     }));
 
     it('should mark a done task to undone',  waitForAsync( ()  => {
-      const task: Task = new Task('test1', new Category('Privat'), Priority.low, true);
-      testService.addTask(task);
-      testService.doneTask(task.id);
-      expect(task.done).toEqual(false);
+      const testTask: Task = taskListMock[4];
+      testTask.done = true;
+      const testTaskDoneFLagAtStart: boolean = testTask.done;
+      testService.addTask(testTask);
+      testService.doneTask(testTask.id);
+      expect(testTask.done).toEqual(!testTaskDoneFLagAtStart);
     }));
   });
 });

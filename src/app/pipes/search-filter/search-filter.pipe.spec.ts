@@ -53,9 +53,9 @@ describe('SearchFilter', () => {
 
   afterEach( () => {
     mockList = taskListMock;
-    mockSearchText: string = '';
+    mockSearchText = '';
     mockClickedCategories = [];
-    mockSearchFlag: boolean = false;
-    mockCatFlag: boolean = false;
+    mockSearchFlag = false;
+    mockCatFlag = false;
   });
 });
