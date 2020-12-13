@@ -10,11 +10,11 @@ describe('PriorityPipe', () => {
   });
 
   it('transforms Priority.low to "low"', () => {
-    expect(pipe.transform(Priority.low)).toBe('low');
+    expect(pipe.transform(Priority.low)).toEqual('low');
   });
 
   it('does not transform Priority.low to "high"', () => {
-    expect(pipe.transform(Priority.low)).not.toBe('high');
+    expect(pipe.transform(Priority.low)).not.toEqual('high');
   });
 });
 
