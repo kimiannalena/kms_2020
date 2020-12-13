@@ -7,7 +7,7 @@ import { testCat0, testCat1, testCat2, testCat3, testCat4, testCat5 } from '../.
 describe('SearchFilter', () => {
   const searchFilter = new SearchFilterPipeMock();
 
-  const mockList: Task[] = taskListMock;
+  let mockList: Task[] = taskListMock;
   let mockSearchText: string = '';
   let mockClickedCategories: Category[] = [];
   let mockSearchFlag: boolean = false;
@@ -18,15 +18,17 @@ describe('SearchFilter', () => {
   });
 
   it('returns same list if both flags are false', () => {
+    mockSearchFlag = false;
+    mockCatFlag = false;
     expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
       .toEqual(mockList);
   });
 
   it('perfoms search function correctly on searchFlag true', () => {
     mockSearchFlag = true;
-    mockSearchText = 'Essen';
+    mockSearchText = 'Müll';
     expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
-      .toEqual([mockList[4]]);
+      .toEqual([mockList[9]]);
   });
 
   it('perfoms search function correctly', () => {
@@ -47,5 +49,13 @@ describe('SearchFilter', () => {
       mockClickedCategories = [testCat1];
       expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
         .not.toEqual([mockList[4], mockList[5]]);
+  });
+
+  afterEach( () => {
+    mockList = taskListMock;
+    mockSearchText: string = '';
+    mockClickedCategories = [];
+    mockSearchFlag: boolean = false;
+    mockCatFlag: boolean = false;
   });
 });
