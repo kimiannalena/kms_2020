@@ -19,4 +19,4 @@ cache:
 
 script:
   - ng build
-  - ng test --browsers=ChromeHeadlessCI
+  - ng test
