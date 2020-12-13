@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TaskService } from '../../service/taskService/task.service';
-import { CategoryService } from '../../service/category.service';
+import { CategoryService } from '../../service/categoryService/category.service';
 import { Task } from '../../model/Task';
 import { Priority } from '../../model/Priority';
 import { Category } from '../../model/Category';

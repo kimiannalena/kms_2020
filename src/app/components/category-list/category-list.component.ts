@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoryService} from '../../service/category.service';
+import {CategoryService} from '../../service/categoryService/category.service';
 import {Category} from '../../model/Category';
 
 @Component({
@@ -24,6 +24,6 @@ export class CategoryListComponent implements OnInit {
     this.categoryService.deleteCategory(id);
   }
   categoryFilter(id: number): void {
-    this.categoryService.addCategoriesClicked(id)
+    this.categoryService.toggleCatInCategoriesClicked(id);
     }
 }

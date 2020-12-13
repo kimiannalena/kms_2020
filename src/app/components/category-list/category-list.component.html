@@ -1,11 +1,20 @@
 <div class="container" (click)="categoryFilter(category.id)"
      *ngFor="let category of categoryList; let i = index;"
 >
-  <div class="card">
+  <div class="card" *ngIf="!categoryService.categoriesClicked.includes(category); else isClickedBlock">
           <span>
             {{category.title}}
             <button (click)="delete(category.id)" class="btn">x</button>
           </span>
   </div>
+  <ng-template #isClickedBlock>
+    <div class="card" style="background-color: #36d9b6">
+      <span>
+        {{category.title}}
+        <button (click)="delete(category.id)" class="btn">x</button>
+      </span>
+    </div>
+
+  </ng-template>
   <!--        <app-category-list></app-category-list>-->
 </div>

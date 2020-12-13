@@ -16,7 +16,8 @@ export class SearchFilterPipe implements PipeTransform {
        resultList = resultList.filter(task => task.title.toLocaleLowerCase().indexOf(searchString) !== -1);
     }
     if (catFlag) {
-      resultList = resultList.filter(task => clickedCategories.includes(task.category));
+      resultList = resultList.filter(task => clickedCategories.includes(task.category)
+     );
     }
     return resultList;
   }

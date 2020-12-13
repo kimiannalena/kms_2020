@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Category} from '../../model/Category';
-import {CategoryService} from '../../service/category.service';
+import {CategoryService} from '../../service/categoryService/category.service';
 
 @Component({
   selector: 'app-category-input',

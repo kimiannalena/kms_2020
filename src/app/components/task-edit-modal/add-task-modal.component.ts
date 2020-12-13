@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { CategoryService } from '../../service/category.service';
+import { CategoryService } from '../../service/categoryService/category.service';
 
 @Component({
   selector: 'app-add-task-modal',
