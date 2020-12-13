@@ -1,27 +1,21 @@
 import {Injectable} from '@angular/core';
-import {Task} from '../model/Task';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {AddTaskModalComponent} from '../components/task-edit-modal/add-task-modal.component';
-import {Priority} from '../model/Priority';
-import {Category} from '../model/Category';
-import {CategoryService } from './category.service';
+import {Task} from '../../../model/Task';
+import {Priority} from '../../../model/Priority';
+import {Category} from '../../../model/Category';
+import {taskListMock} from '../../../model/mocks/taskMock';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
+export class TaskServiceMock {
 
-  constructor(private modalService: NgbModal,
-              public categoryService: CategoryService) {
+  constructor() {
   }
 
 
   // tslint:disable-next-line:variable-name
-  _taskList: Task[] = [
-    new Task('Test1', this.categoryService.CATEGORYLIST[0], Priority.low),
-    new Task('Test2', this.categoryService.CATEGORYLIST[1], Priority.medium),
-    new Task('Test3', this.categoryService.CATEGORYLIST[2], Priority.high)];
+  _taskList: Task[] = taskListMock;
 
   addTask(newEntry: Task): void {
     if (newEntry.title.trim() === '') {
@@ -49,15 +43,11 @@ export class TaskService {
     }
   }
 
-  async openTaskEditModal(editEntry: Task): Promise<void> {
-    const modalReference = this.modalService.open(AddTaskModalComponent);
+  async openTaskEditModal(editEntry: Task, givenTitle: string, givenPriority: Priority, givenCatTitle: string): Promise<void> {
     try {
-      // get input values from modal via Promise on modal.close
-      const result = await modalReference.result;
-      // set value from result if they were set
-      const title: string = result.title !== '' ? result.title : '';
-      const priority: Priority = result.priority in Priority ? result.priority : Priority.low;
-      const category: string = result.categoryTitle !== '' ? result.categoryTitle : '';
+      const title: string = givenTitle !== '' ? givenTitle : '';
+      const priority: Priority = givenPriority in Priority ? givenPriority : Priority.low;
+      const category: string = givenCatTitle !== '' ? givenCatTitle : '';
       // edit the task with the value from modal
       this.editTask(editEntry, title, new Category(category), priority);
     } catch (err) {

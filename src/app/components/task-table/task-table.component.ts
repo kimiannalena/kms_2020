@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { TaskService } from '../../service/task.service';
+import { TaskService } from '../../service/taskService/task.service';
 import { Task } from '../../model/Task';
 import { CategoryService } from '../../service/category.service';
 import { Category } from '../../model/Category';
