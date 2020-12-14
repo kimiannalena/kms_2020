@@ -12,6 +12,7 @@ const testTask6: Task = new Task('Kochen', testCat2, Priority.high);
 const testTask7: Task = new Task('Joggen', testCat2, Priority.medium);
 const testTask8: Task = new Task('Garten', testCat2, Priority.medium);
 const testTask9: Task = new Task('Müll', testCat2, Priority.low);
-
+console.log(testTask1.priority);
 export let taskListMock: Task[] =
   [testTask0, testTask1, testTask2, testTask3, testTask4, testTask5, testTask6, testTask7, testTask8, testTask9];
+

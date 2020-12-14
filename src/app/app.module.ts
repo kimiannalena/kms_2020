@@ -14,6 +14,8 @@ import { CategoryListComponent } from './components/category-list/category-list.
 import { PriorityPipe } from './pipes/priority/priority.pipe';
 import { SearchFilterPipe } from './pipes/search-filter/search-filter.pipe';
 import { TestitestComponent } from './components/testitest/testitest.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
 
 /*
 todo: highlight clicked category
@@ -37,9 +39,14 @@ todo: highlight clicked category
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faAngleDoubleUp);
+  }
+}
