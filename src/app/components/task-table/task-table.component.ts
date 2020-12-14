@@ -22,6 +22,7 @@ export class TaskTableComponent implements OnInit {
   }
 
   openEditModal(editEntry: Task): void {
+    this.taskService.setTaskToEdit(editEntry);
     this.taskService.openTaskEditModal(editEntry).then();
   }
 

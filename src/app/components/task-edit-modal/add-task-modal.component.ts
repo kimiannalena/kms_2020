@@ -14,9 +14,9 @@ export class AddTaskModalComponent implements OnInit {
 
   constructor(public activeModal: NgbActiveModal,
               public categoryService: CategoryService) {
-    this.title = '';
-    this.priority = '';
-    this.categoryTitle = '';
+    this.title = categoryService.taskService.taskToEdit.title;
+    this.priority = categoryService.taskService.taskToEdit.priority.toString();
+    this.categoryTitle = categoryService.taskService.taskToEdit.category.title;
   }
 
   save(): void {

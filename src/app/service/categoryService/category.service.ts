@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Category } from '../../model/Category';
 import { testCat1, testCat2, testCat3, testCat4, testCat5} from '../../model/mocks/categoryMock';
+import { TaskService } from '../taskService/task.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-
   constructor() {
   }
-
   CATEGORYLIST: Category[] = [testCat1, testCat2, testCat3, testCat4, testCat5];
 
   categoriesClicked: Category[] = [];
+
+  taskService: any;
+
+  setTaskService(taskService: TaskService): void {
+    this.taskService = taskService;
+  }
 
   addCategory(newCategory: Category): void {
     if (newCategory.title.trim() === '') {

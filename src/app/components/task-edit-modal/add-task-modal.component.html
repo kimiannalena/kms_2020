@@ -6,17 +6,17 @@
 </div>
 <div class="modal-body">
   <div class="form-group">
-    <label for="itemInputTitle">Title</label>
+    <label for="itemInputTitle">Set Title</label>
     <input type="text" class="form-control" id="itemInputTitle" [(ngModel)]="title">
 
-    <label for="taskCategoryInput">Category</label>
+    <label for="taskCategoryInput">Set Category</label>
 <!--    <input type="text" class="form-control" id="itemInputCategory" [(ngModel)]="categoryTitle">-->
     <select name="Category" id="taskCategoryInput" [(ngModel)]="categoryTitle" class="form-control col-4" >
       <option selected disabled value="">Category</option>
       <option *ngFor="let cat of this.categoryService.CATEGORYLIST"> {{cat.title}} </option>
     </select>
 
-    <label for="itemInputPriority">PriorityMock</label>
+    <label for="itemInputPriority">Set Priority</label>
     <select name="priority" id="itemInputPriority" [(ngModel)]="priority" class="form-control col-4">
       <option selected disabled value="">PriorityMock</option>
       <option value="0">low</option>

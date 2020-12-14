@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TaskService } from './service/taskService/task.service';
+import { CategoryService } from './service/categoryService/category.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'todo-app';
 
-  constructor() {}
+  constructor(public taskService: TaskService, public categoryService: CategoryService) {
+    this.categoryService.setTaskService(taskService);
+  }
 }

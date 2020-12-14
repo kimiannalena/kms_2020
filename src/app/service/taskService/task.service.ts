@@ -16,6 +16,7 @@ export class TaskService {
               ) {
   }
 
+  public taskToEdit: Task = new Task('Test', new Category('test'), Priority.low);
 
   // tslint:disable-next-line:variable-name
   _taskList: Task[] = taskListMock;
@@ -44,6 +45,11 @@ export class TaskService {
         }
       }
     }
+  }
+
+
+  setTaskToEdit(value: Task): void{
+    this.taskToEdit = value;
   }
 
   async openTaskEditModal(editEntry: Task): Promise<void> {
