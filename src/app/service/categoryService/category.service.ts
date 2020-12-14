@@ -49,6 +49,13 @@ export class CategoryService {
       }
     }
     console.log(this.categoriesClicked);
+
+
+
   }
 
+
+  filterCategories(): void {
+
+  }
 }
