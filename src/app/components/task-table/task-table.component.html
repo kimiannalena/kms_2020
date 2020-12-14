@@ -19,7 +19,7 @@
       *ngFor="let task of this._taskList | searchFilter: searchText : clickedCategories : searchText != '' : this.clickedCategories.length != 0; let i = index;"
   >
     <td class="col-1">{{i}}</td>
-    <td *ngIf="this.task.priority > 1; then thenBlock else elseBlock"></td>
+    <td *ngIf="this.task.priority > 1 || this.task.priority == 'high'; then thenBlock else elseBlock"></td>
     <ng-template #thenBlock><td class="col-1">{{task.priority | priority}} <fa-icon style="color: #ff0f0f" [icon]="['fas', 'angle-double-up']"></fa-icon></td></ng-template>
     <ng-template #elseBlock><td class="col-1">{{task.priority | priority}}</td></ng-template>
     <td class="col-1">
