@@ -7,8 +7,7 @@
 <div class="modal-body">
   <div class="form-group">
     <label for="itemInputTitle">Set Title</label>
-    <input type="text" class="form-control" id="itemInputTitle" [(ngModel)]="title">
-
+    <input [appAutoFocus]="true" class="form-control" id="itemInputTitle" [(ngModel)]="title">
     <label for="taskCategoryInput">Set Category</label>
 <!--    <input type="text" class="form-control" id="itemInputCategory" [(ngModel)]="categoryTitle">-->
     <select name="Category" id="taskCategoryInput" [(ngModel)]="categoryTitle" class="form-control col-4" >

@@ -16,6 +16,7 @@ import { SearchFilterPipe } from './pipes/search-filter/search-filter.pipe';
 import { TestitestComponent } from './components/testitest/testitest.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faAngleDoubleUp, faAngleDown, faAngleUp, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { AutoFocusDirective } from './directives/auto-focus.directive';
 
 /*
 todo: highlight clicked category
@@ -33,7 +34,8 @@ todo: highlight clicked category
     CategoryListComponent,
     PriorityPipe,
     SearchFilterPipe,
-    TestitestComponent
+    TestitestComponent,
+    AutoFocusDirective
   ],
   imports: [
     BrowserModule,

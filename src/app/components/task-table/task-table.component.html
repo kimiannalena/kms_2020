@@ -24,7 +24,10 @@
       *ngFor="let task of this._taskList | searchFilter: searchText : clickedCategories : searchText != '' : this.clickedCategories.length != 0; let i = index;"
   >
     <td class="col">
-      <input id="doneCheckbox{{i}}" type="checkbox" (change)="done(task.id)">
+      <label for="doneCheckbox{{i}}">
+        <!-- Default unchecked -->
+        <input id="doneCheckbox{{i}}" tabindex="0" type="checkbox" (change)="done(task.id)">
+      </label>
     </td>
     <td class="col">
       <span [className]="this.task.done ? 'finish-title' : 'title'">{{this.task.title}}</span>
