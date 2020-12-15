@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --watch",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-
     "test_headless": "ng test --watch false --browsers ChromeHeadless",
-    "e2e_headless": "ng e2e --protractor-config='e2e/ci.protractor.conf.js'"
+    "e2e_headless": "ng e2e --protractor-config='e2e/ci.protractor.conf.js'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/todo-app"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "bootstrap": "^4.5.0",
+    "gh-pages": "^3.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
