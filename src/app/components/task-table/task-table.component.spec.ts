@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskTableComponent } from './task-table.component';
+import {SearchFilterPipeMock} from '../../pipes/search-filter/search-filterTest/search-filter.pipe.mock';
 
 describe('TaskTableComponent', () => {
   let component: TaskTableComponent;
@@ -8,7 +9,8 @@ describe('TaskTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaskTableComponent ]
+      declarations: [ TaskTableComponent,
+                      SearchFilterPipeMock ]
     })
       .compileComponents();
   });

@@ -17,7 +17,7 @@ export class TaskTableComponent implements OnInit {
   constructor(public taskService: TaskService,
               public categoryService: CategoryService) {
     this.searchText = '';
-    console.log(taskService.taskList);
+    // console.log(taskService.taskList);
     this.clickedCategories = this.categoryService.categoriesClicked;
   }
 

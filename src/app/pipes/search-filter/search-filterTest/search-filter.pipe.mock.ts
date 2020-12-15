@@ -1,6 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Task} from '../../model/Task';
-import {Category} from '../../model/Category';
+import {Task} from '../../../model/Task';
+import {Category} from '../../../model/Category';
 
 @Pipe({
   name: 'searchFilter'

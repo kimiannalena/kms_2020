@@ -1,8 +1,8 @@
 import {SearchFilterPipeMock} from './search-filter.pipe.mock';
-import {Category} from '../../model/Category';
-import {Task} from '../../model/Task';
-import { taskListMock } from '../../model/mocks/taskMock';
-import { testCat0, testCat1, testCat2, testCat3, testCat4, testCat5 } from '../../model/mocks/categoryMock';
+import {Category} from '../../../model/Category';
+import {Task} from '../../../model/Task';
+import { taskListMock } from '../../../model/mocks/taskMock';
+import { testCat0, testCat1, testCat2, testCat3, testCat4, testCat5 } from '../../../model/mocks/categoryMock';
 
 describe('SearchFilter', () => {
   const searchFilter = new SearchFilterPipeMock();

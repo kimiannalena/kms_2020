@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchFilterPipeMock } from './search-filter.pipe.mock';
+import { SearchFilterPipeMock } from './search-filterTest/search-filter.pipe.mock';
 
 @NgModule({
   declarations: [SearchFilterPipeMock],
