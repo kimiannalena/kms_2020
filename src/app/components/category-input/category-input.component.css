@@ -1,10 +1,6 @@
-h1, h2, h3, h4, h5, p, span, strike {
-  font-family: 'Montserrat', sans-serif;
-}
-
 #task-container {
   max-width: 800px;
-  margin: 100px auto;
+  margin: auto;
   justify-content: space-around;
   align-items: flex-start;
 }
@@ -20,6 +16,7 @@ h1, h2, h3, h4, h5, p, span, strike {
 #categorySubmit {
   border: solid 1px #858484;
   border-radius: 0;
+  background-color: lightgrey;
 }
 
 .task-wrapper {

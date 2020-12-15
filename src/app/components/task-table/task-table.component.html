@@ -1,5 +1,10 @@
-<div class="md-form">
-  <input [(ngModel)]="searchText"  class="form-control" type="text" placeholder="Search" aria-label="Search">
+<div class="row">
+  <div class="col-2">
+    <h1>TodoList</h1>
+  </div>
+  <div class="col-8">
+    <input [(ngModel)]="searchText" class="form-control search"  type="text" placeholder="Search Todo" aria-label="Search">
+  </div>
 </div>
 <table class="table">
   <thead>

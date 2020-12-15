@@ -1,20 +1,25 @@
-<div class="container" (click)="categoryFilter(category.id)"
-     *ngFor="let category of categoryList; let i = index;"
->
-  <div class="card" *ngIf="!categoryService.categoriesClicked.includes(category); else isClickedBlock">
+<div class="form-wrapper">
+  <h4>Filter by Category</h4>
+  <div class="container" (click)="categoryFilter(category.id)"
+       *ngFor="let category of categoryList; let i = index;"
+  >
+    <div class="card" *ngIf="!categoryService.categoriesClicked.includes(category); else isClickedBlock">
           <span>
             {{category.title}}
             <button (click)="delete(category.id)" class="btn">x</button>
           </span>
-  </div>
-  <ng-template #isClickedBlock>
-    <div class="card" style="background-color: #36d9b6">
+
+    </div>
+    <hr>
+    <ng-template #isClickedBlock>
+      <div class="card" style="background-color: #36d9b6">
       <span>
         {{category.title}}
         <button (click)="delete(category.id)" class="btn">x</button>
       </span>
-    </div>
+      </div>
 
-  </ng-template>
-  <!--        <app-category-list></app-category-list>-->
+    </ng-template>
+    <!--        <app-category-list></app-category-list>-->
+  </div>
 </div>

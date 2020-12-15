@@ -17,3 +17,13 @@
   border-radius: 0;
   border: none;
 }
+
+.table {
+  width: 100%;
+}
+
+.search {
+  position: relative;
+  align-content: center;
+  margin-bottom: 3rem;
+}
