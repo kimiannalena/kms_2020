@@ -8,10 +8,10 @@ describe('SearchFilter', () => {
   const searchFilter = new SearchFilterPipeMock();
 
   let mockList: Task[] = taskListMock;
-  let mockSearchText: string = '';
+  let mockSearchText = '';
   let mockClickedCategories: Category[] = [];
-  let mockSearchFlag: boolean = false;
-  let mockCatFlag: boolean = false;
+  let mockSearchFlag = false;
+  let mockCatFlag = false;
 
   it('is present', () => {
     expect(searchFilter).toBeTruthy();
@@ -50,6 +50,16 @@ describe('SearchFilter', () => {
       expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
         .not.toEqual([mockList[4], mockList[5]]);
   });
+
+
+  // TODO: result is karma.config.js ... whyyyy??
+  /*it('is null if category does not match any list entries', () => {
+    mockCatFlag = true;
+    mockClickedCategories = [testCat0];
+    expect(searchFilter.transform(mockList, mockSearchText, mockClickedCategories, mockSearchFlag, mockCatFlag))
+      .toEqual([]);
+      // .toBeNull();
+  });*/
 
   afterEach( () => {
     mockList = taskListMock;
