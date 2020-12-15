@@ -1,6 +1,7 @@
 # TodoApp
 
 [![Build Status](https://travis-ci.com/HerrMoriden/kms_2020.svg?branch=main)](https://travis-ci.com/HerrMoriden/kms_2020)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
