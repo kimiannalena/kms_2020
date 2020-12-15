@@ -18,3 +18,8 @@ nav {
   box-shadow: 0 3px 8px rgba(0,0,0,0.25);
   padding: 40px;
 }
+
+.side {
+  align-content: space-evenly;
+  margin: 4rem;
+}

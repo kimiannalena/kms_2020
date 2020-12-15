@@ -15,7 +15,7 @@ import { PriorityPipe } from './pipes/priority/priority.pipe';
 import { SearchFilterPipe } from './pipes/search-filter/search-filter.pipe';
 import { TestitestComponent } from './components/testitest/testitest.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faAngleDoubleUp, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleUp, faAngleDown, faAngleUp, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 /*
 todo: highlight clicked category
@@ -47,6 +47,6 @@ todo: highlight clicked category
 })
 export class AppModule {
   constructor(private library: FaIconLibrary) {
-    library.addIcons(faAngleDoubleUp, faAngleUp, faAngleDown);
+    library.addIcons(faAngleDoubleUp, faAngleUp, faAngleDown, faTrash, faEdit);
   }
 }
